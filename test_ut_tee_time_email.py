@@ -46,13 +46,6 @@ import time
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-# --- EMAIL CONFIGURATION ---
-SMTP_SERVER = "smtp.gmail.com"
-SMTP_PORT = 465
-# WARNING: Ensure you are using a 16-character 'App Password', not your main account password.
-SENDER_EMAIL = "jfrolfes@gmail.com"
-SENDER_PASSWORD = "fpcz jedj pukc eujb"
-RECIPIENT_EMAIL = "j.giraffe98@gmail.com" #banas.kevin.j@gmail.com" #change to keb's email
 
 def send_tee_time_inquiry():
     """Crafts and sends the weekly golf preference email."""
