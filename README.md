@@ -8,7 +8,7 @@ The email portion will email the player to request the player's preferred tee ti
 
 The booking portion will:
 
-Store the player's preferred tee time, course, and booking information.
+Parse the player's email response and store preferred tee time and course.
     (Player's email response must be fresher than two days old from time of booking run to prevent stale or duplicate bookings.)
 
 Navigate time and date filters to parse all available UT State Park golf course tee times for 10 days out
@@ -18,7 +18,8 @@ Search for the closest 4-man tee time (within +/- 30 min from player's preferred
      If none exist +/- 30 min at the player's preferred course, 
      the script will book the nearest-to-preferred available 4-man tee time at one of the other courses
 
-Navigate through the booking form and complete booking
+Navigate through the booking form and complete booking based on the booking info variables defined at the top of the script.
+
 Batch the email script to run at 12:00 PM the Sunday 12 days before desired tee time for best results.
 
 Batch the booking script to run some time between 6:50 PM and 11:59 PM on Monday 11 days before the desired tee time for best results.
