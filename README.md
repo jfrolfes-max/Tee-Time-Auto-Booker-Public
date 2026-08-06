@@ -1,9 +1,9 @@
+# *Privatizing upgrades so I don't get hoisted by my own petard (script).*
+
 # Tee-Time-Auto-Booker-Public
 
 These scripts are designed to automate booking tee times for Utah State Park's golf courses.
 I use them specifically for Fridays, but you can schedule booking runs ~11 days out from any desired day.
-
-*Privatizing upgrades so I don't get hoisted by my own petard (script).*
 
 ## The email portion will: 
 Email the player to request the player's preferred tee time and course for the Friday after next. (Update target date function and email body content if not booking Friday ~11 days out)
