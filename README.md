@@ -1,4 +1,5 @@
-# *Privatizing upgrades so I don't get hoisted by my own petard (script).*
+
+Privatizing upgrades so genpop doesn't steal my tee times etc.
 
 # Tee-Time-Auto-Booker-Public
 
