@@ -1,7 +1,7 @@
 
 # Tee-Time-Auto-Booker-Public
 
-This repository contains a small pair of automation scripts for booking Utah State Park golf tee times. The workflow is intentionally simple: one script sends a planning email to collect a preferred course and time, and the other script reads the reply and attempts to book a matching tee time.
+This repository contains a tuned-down public version of a small pair of scripts I use to automate booking Utah State Park golf tee times. The workflow is intentionally simple: one script sends a planning email to collect a preferred course and time, and the other script reads the reply and attempts to book a matching tee time.
 
 ## What the project does
 
