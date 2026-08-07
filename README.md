@@ -9,7 +9,7 @@ This repository contains a small pair of automation scripts for booking Utah Sta
 - The booking script checks for a recent reply, parses the preference, and attempts to find a matching tee time.
 - If the preferred course is unavailable within the requested window, the script falls back to the closest available option at another course.
 
-###The email body goes into more detail###
+### The email body goes into more detail
 
       Hey,
 
