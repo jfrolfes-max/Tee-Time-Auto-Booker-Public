@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
-"""PRD UT Tee Time Email.ipynb
-"""
+"""Automation flow for sending the tee-time planning email."""
 
-# ALL INPUTS HERE
 # --- EMAIL CONFIGURATION ---
+# Fill these values before running the script.
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 465
 # WARNING: Ensure you are using a 16-character 'App Password', not your main account password.
-SENDER_EMAIL = "" #Account sending automated email
-SENDER_PASSWORD = "" #App password for sender email account
-RECIPIENT_EMAIL = "" #The player/booking owner email (sender and recipient emails can be the same)
+SENDER_EMAIL = ""  # Account sending automated email
+SENDER_PASSWORD = ""  # App password for the sender email account
+RECIPIENT_EMAIL = ""  # The player/booking owner email (sender and recipient emails can be the same)
 
 from datetime import datetime, timedelta
+
 import pytz
 import sys
 

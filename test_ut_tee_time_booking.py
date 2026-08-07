@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
-"""PRD UT Tee Time Booking.ipynb
-"""
-# ALL INPUTS HERE
-SENDER_EMAIL = "" #Must be same sender and receiver emails as the email script specifies
+"""Automation flow for booking Utah State Park tee times."""
+
+# --- CONFIGURATION ---
+# Fill these values before running the script.
+SENDER_EMAIL = ""  # Must match the sender/recipient values used by the email script.
 SENDER_PASSWORD = ""
-RECIPIENT_EMAIL = "" 
+RECIPIENT_EMAIL = ""
 EMAIL_USER = SENDER_EMAIL
 EMAIL_PASS = SENDER_PASSWORD
 
@@ -21,12 +22,11 @@ billing_street_address = ""
 zip_code = ""
 
 
-import imaplib
 import email
+import imaplib
 import re
 import sys
-from email.header import decode_header
-from datetime import datetime, timedelta, UTC
+from datetime import UTC, datetime, timedelta
 
 # --- IMAP CONFIGURATION ---
 IMAP_SERVER = "imap.gmail.com"
@@ -109,21 +109,19 @@ DESIRED_COURSE = new_course
 DESIRED_TEE_TIME = new_time
 print(f"SUCCESS: Variables updated. Target: {DESIRED_COURSE} at {DESIRED_TEE_TIME}.")
 
+import os
+import time
+from datetime import UTC, datetime, timedelta
+
+from IPython.display import Image, display
+from pyvirtualdisplay import Display
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-from pyvirtualdisplay import Display
-from IPython.display import Image, display
-import time
-import os
-from datetime import datetime, timedelta, UTC
-
-import time
-from datetime import datetime, timedelta, UTC
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 
 
 def get_target_date():

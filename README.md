@@ -1,28 +1,39 @@
 
-Privatizing upgrades so genpop doesn't steal my tee times etc.
-
 # Tee-Time-Auto-Booker-Public
 
-These scripts are designed to automate booking tee times for Utah State Park's golf courses.
-I use them specifically for Fridays, but you can schedule booking runs ~11 days out from any desired day.
+This repository contains a small pair of automation scripts for booking Utah State Park golf tee times. The workflow is intentionally simple: one script sends a planning email to collect a preferred course and time, and the other script reads the reply and attempts to book a matching tee time.
 
-## The email portion will: 
-Email the player to request the player's preferred tee time and course for the Friday after next. (Update target date function and email body content if not booking Friday ~11 days out)
+## What the project does
 
-## The booking portion will:
-Parse the player's email response and store preferred tee time and course.
-(Player's email response must be fresher than two days old from time of booking run to prevent stale or duplicate bookings.)
+- The email script sends a request for the golfer's preferred course and tee time for the Friday after next.
+- The booking script checks for a recent reply, parses the preference, and attempts to find a matching tee time.
+- If the preferred course is unavailable within the requested window, the script falls back to the closest available option at another course.
 
-Navigate time and date filters to parse all available UT State Park golf course tee times for 10 days out
+## Repository layout
 
-Search for the closest 4-man tee time (+/- 30 min from player's preferred time at preferred course) and select it
+- [README.md](README.md) — overview and usage notes
+- [test_ut_tee_time_booking.py](test_ut_tee_time_booking.py) — booking automation flow
+- [test_ut_tee_time_email.py](test_ut_tee_time_email.py) — email inquiry flow
+- [docs/SETUP.md](docs/SETUP.md) — setup and scheduling guidance
+- [.gitignore](.gitignore) — ignores generated screenshots, credentials, and Python cache files
 
-*If none exist +/- 30 min at the player's preferred course, the script will book the nearest-to-preferred             available 4-man tee time (up to +/-30 min from preferred) at one of the other courses*
+## Setup
 
-Navigate through the booking form and complete booking based on the booking info variables defined at the top of the script.
+1. Install the required packages:
+   - `pip install -r requirements.txt`
+2. Fill in the required email, payment, and contact values at the top of the relevant Python script.
+3. Review the timing logic and adjust the target date or email body if your booking window differs from the default Friday-after-next flow.
 
-## For Best Results As-is:
-1. Batch the email script to run at 12:00 PM MT the Sunday 12 days before desired tee time.
+## Recommended timing
 
-2. Batch the booking script to run some time between 6:50 PM MT and 11:59 PM MT on Monday 11 days before the desired tee time.
+For the default workflow, the scripts are best run in this order:
+
+1. Run the email script on Sunday around 12:00 PM MT, 12 days before the desired tee time.
+2. Run the booking script between 6:50 PM MT and 11:59 PM MT on Monday, 11 days before the desired tee time.
+
+## Notes
+
+- The scripts are intentionally lightweight and depend on a few browser and email integrations.
+- They were written for a specific workflow and may need minor adjustments if the website structure changes.
+- Review the scripts carefully before using them for a real booking.
 
