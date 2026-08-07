@@ -9,6 +9,39 @@ This repository contains a small pair of automation scripts for booking Utah Sta
 - The booking script checks for a recent reply, parses the preference, and attempts to find a matching tee time.
 - If the preferred course is unavailable within the requested window, the script falls back to the closest available option at another course.
 
+###The email body goes into more detail###
+
+      Hey,
+
+    It's time to choose a tee time for Friday, the {formatted_date}.
+    The bot is ready to process your request. If you don't reply to this email by Monday 6:50 PM, the bot won't book you anything.
+
+    Please reply with your preferred golf course and time. Your reply must be formatted as:
+
+    Golf Course, Time (no more, no less)
+
+    e.g.
+
+    Soldier Hollow Silver, 11:00 AM
+
+    The script will match on course first and try to book the closest 4-man tee time to your preferred time.
+    If there are no 4-man openings +/-30 min from the time and course you want, it will book the nearest time at one of the other courses (not Palisade).
+
+    Your options for courses are:
+
+    Wasatch Mountain
+    Wasatch Lake
+    Soldier Hollow Silver
+    Soldier Hollow Gold
+    Palisade
+
+    Any time will work as long as it's 00:00 AM/PM format.
+    Spelling and spacing are important, remember the comma before the time.
+
+    You can send another reply at any point up to 6:50 PM Monday to update preferences.
+
+    -Jawno's Bot
+
 ## Repository layout
 
 - [README.md](README.md) — overview and usage notes
